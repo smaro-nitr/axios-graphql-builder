@@ -1,0 +1,29 @@
+{
+  "name": "axios-graphql-builder",
+  "version": "0.0.0-beta",
+  "description": "Create Axios based GraphQL query from JSON Object",
+  "main": "dist/axios-graphql-builder.js",
+  "types": "dist/axios-graphql-builder.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Subhendu Kumar Sahoo <smaro.nitr@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "axios",
+    "graphql",
+    "axios graphql query",
+    "json to graphql query"
+  ],
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
