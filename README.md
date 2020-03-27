@@ -1,4 +1,4 @@
-# axios-graphql-extended
+# axios-graphql-builder
 
 ## About
 A light weight library to generate Axios`s GraphQL query from JSON.
@@ -8,7 +8,7 @@ A light weight library to generate Axios`s GraphQL query from JSON.
 ## Installation
 Local installation
 ```shell
-npm install axios-graphql-extended --save
+npm install axios-graphql-builder --save
 ```
 <br/>&nbsp;
 
@@ -27,15 +27,29 @@ npm install axios-graphql-extended --save
 </table>
 <br />
 *Note: Last child in JSON object hierarchy should be assigned null value
+
 <br/>&nbsp;
 
 ## Usage
 Once installed in your project. It can be used as:
 
 ```shell
+Example:
+
 import { buildQuery } from 'axios-graphql-builder'
 
-buildQuery(JsonInput)
+const jsonInput = {
+  a: null,
+  b: null,
+  c: {
+    c1: null,
+    c2: null
+  }
+}
+
+const output = buildQuery(jsonInput)
+
+console.log(output) >>> { "query": "a \n b \n c { \n c1 \n c2 \n } \n " }
 ```
 
 <br/>&nbsp;
