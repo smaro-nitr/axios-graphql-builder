@@ -16,7 +16,7 @@ export const buildQuery = (jsonInput: any, paramList?: Param[]) => {
   let slicedQueryString = modfiedQueryString.slice(1, modfiedQueryString.length - 1)
   Array.isArray(paramList) &&
     paramList.forEach((item: Param) => {
-      slicedQueryString.replace(item.key, `${item.key}(${item.param})`)
+      slicedQueryString = slicedQueryString.replace(item.key, `${item.key}(${item.param})`)
     })
 
   const axiosBasedQuery = { query: slicedQueryString }
