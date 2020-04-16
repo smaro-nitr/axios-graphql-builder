@@ -11,7 +11,7 @@ exports.buildQuery = function (jsonInput, paramList) {
     var slicedQueryString = modfiedQueryString.slice(1, modfiedQueryString.length - 1);
     Array.isArray(paramList) &&
         paramList.forEach(function (item) {
-            slicedQueryString.replace(item.key, item.key + "(" + item.param + ")");
+            slicedQueryString = slicedQueryString.replace(item.key, item.key + "(" + item.param + ")");
         });
     var axiosBasedQuery = { query: slicedQueryString };
     return axiosBasedQuery;
